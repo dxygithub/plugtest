@@ -19,11 +19,13 @@
     </properties>
 
     <dependencies>
+        <!--mrp-->
         <dependency>
             <groupId>com.rabbit</groupId>
             <artifactId>mybatis-rabbit-plug-boot-start</artifactId>
             <version>1.0.0.alpha</version>
         </dependency>
+        <!--mrp-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
