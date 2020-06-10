@@ -19,23 +19,46 @@
     </properties>
 
     <dependencies>
-        <!--mrp-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.rabbit</groupId>
             <artifactId>mybatis-rabbit-plug-boot-start</artifactId>
             <version>1.0.0.alpha</version>
         </dependency>
-        <!--mrp-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.3</version>
-        </dependency>
 
+        <!--mrp-->
+        <!--<dependency>
+            <groupId>com.rabbit</groupId>
+            <artifactId>mybatis-rabbit-plug-boot-start</artifactId>
+            <version>1.0.0.alpha</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-boot-start-1.0.0.alpha.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbit</groupId>
+            <artifactId>mybatis-rabbit-plug-core</artifactId>
+            <version>1.0.0.alpha</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-core-1.0.0.alpha.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbit</groupId>
+            <artifactId>mybatis-rabbit-plug-boot-common</artifactId>
+            <version>1.0.0.alpha</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-common-1.0.0.alpha.jar</systemPath>
+        </dependency>-->
+        <!--mrp-->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.10</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

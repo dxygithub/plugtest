@@ -16,14 +16,14 @@ public class PlugTest extends BaseBean{
 
     private Integer id;
 
-    @Id
-    private Integer plugId;
+    @Id(isKeyGenerator = true,generateType = PrimaryKey.UUID32)
+    private String plugId;
 
     private String plugName;
 
     private String plugDes;
 
-    public PlugTest(Integer id,Integer plugId,String plugName,String plugDes){
+    public PlugTest(Integer id,String plugId,String plugName,String plugDes){
         this.id=id;
         this.plugId=plugId;
         this.plugName=plugName;
