@@ -23,37 +23,29 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!--mrp-->
         <dependency>
             <groupId>com.rabbit</groupId>
             <artifactId>mybatis-rabbit-plug-boot-start</artifactId>
             <version>1.0.0.alpha</version>
-        </dependency>
-
-        <!--mrp-->
-        <!--<dependency>
-            <groupId>com.rabbit</groupId>
-            <artifactId>mybatis-rabbit-plug-boot-start</artifactId>
-            <version>1.0.0.alpha</version>
-            <scope>system</scope>
+            <scope>compile</scope>
             <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-boot-start-1.0.0.alpha.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.rabbit</groupId>
             <artifactId>mybatis-rabbit-plug-core</artifactId>
             <version>1.0.0.alpha</version>
-            <scope>system</scope>
+            <scope>compile</scope>
             <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-core-1.0.0.alpha.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.rabbit</groupId>
             <artifactId>mybatis-rabbit-plug-boot-common</artifactId>
             <version>1.0.0.alpha</version>
-            <scope>system</scope>
+            <scope>compile</scope>
             <systemPath>${project.basedir}/mrp-lib/mybatis-rabbit-plug-common-1.0.0.alpha.jar</systemPath>
-        </dependency>-->
+        </dependency>
         <!--mrp-->
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
