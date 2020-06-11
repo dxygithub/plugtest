@@ -3,6 +3,7 @@ package com.plug.test.plugtest.bean;
 import com.plug.test.plugtest.enumation.DelFlag;
 import com.rabbit.core.annotation.Column;
 import com.rabbit.core.annotation.Create;
+import com.rabbit.core.annotation.Delete;
 import com.rabbit.core.annotation.Update;
 import com.rabbit.core.typehandler.IEnumTypeHandler;
 import lombok.Data;
@@ -23,13 +24,14 @@ public class BaseBean {
 
     private Date updateTime;
 
-    @Column(typeHandler = IEnumTypeHandler.class)
-    private DelFlag delFlag;
+    @Delete(physicsDel = false,value = 8)
+    //@Column(typeHandler = IEnumTypeHandler.class)
+    private Integer delFlag;
 
     @Create
     public void insert(){
         this.createTime=new Date();
-        this.delFlag=DelFlag.NO;
+        this.delFlag=DelFlag.NO.getValue();
     }
 
     @Update

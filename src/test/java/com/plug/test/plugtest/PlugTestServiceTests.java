@@ -45,4 +45,12 @@ public class PlugTestServiceTests {
                 orderBy("id",QueryWrapper.DESC),PlugTest.class);
         log.info(plugTestList !=null ? JSONUtil.toJsonStr(plugTestList) : "selectList failed...");
     }
+
+    @Test
+    public void delete(){
+        // 逻辑删除
+        Long result=plugTestService.deleteObject("8031320f9a0c4898847d52a6eba8b363",PlugTest.class);
+        log.info(result>0?"deleteObject success...":"deleteObject failed...");
+
+    }
 }
