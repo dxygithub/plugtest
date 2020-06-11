@@ -1,11 +1,16 @@
 package com.plug.test.plugtest;
 
+import cn.hutool.json.JSONUtil;
 import com.plug.test.plugtest.bean.PlugTest;
+import com.plug.test.plugtest.enumation.DelFlag;
 import com.plug.test.plugtest.service.PlugTestService;
+import com.rabbit.core.constructor.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 /**
  * @ClassName PlugTestServiceTests
@@ -28,5 +33,16 @@ public class PlugTestServiceTests {
         plugTest.setPlugDes("操作系统");
         String result=plugTestService.addObject(plugTest);
         log.info("result==>"+result);
+    }
+
+    @Test
+    public void queryObjectList(){
+        List<PlugTest> plugTestList=plugTestService.queryObjectList(new QueryWrapper<>().
+                /*where("del_flag", DelFlag.NO.getValue()).*/
+                ge("id",1).
+                setColumn("id,plug_des,plug_name,del_flag").
+                limit(0,10).
+                orderBy("id",QueryWrapper.DESC),PlugTest.class);
+        log.info(plugTestList !=null ? JSONUtil.toJsonStr(plugTestList) : "selectList failed...");
     }
 }

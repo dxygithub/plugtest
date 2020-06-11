@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://139.224.81.29/mybatis_rabbit_plug?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
-    password: Duxiaoyu@123
+    password: ENC(a5rsd8uK8dVi94FUIw0AQdZSId+S8j1v)
 rabbit-mybatis-plug:
   banner: true
   mapper-locations: classpath*:/mapper/**/*.xml
@@ -11,3 +11,6 @@ rabbit-mybatis-plug:
 logging:
   level:
     com.plug.test.plugtest.mapper: debug
+jasypt:
+  encryptor:
+    password: NDEyZWQyZTlhZWJhODY2NjRhYTYyYTg3ZTI5NmExYjU=

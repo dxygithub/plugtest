@@ -20,7 +20,7 @@ public enum DelFlag implements IEnum<Integer> {
         this.value=value;
     }
 
-    public static DelFlag convert(int value){
+    public static DelFlag convert(Integer value){
         for (DelFlag delFlag:DelFlag.values()){
             if(delFlag.value==value){
                 return delFlag;

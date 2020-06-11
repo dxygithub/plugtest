@@ -1,6 +1,8 @@
 package com.plug.test.plugtest;
 
+import cn.hutool.json.JSONUtil;
 import com.plug.test.plugtest.bean.PlugTest;
+import com.plug.test.plugtest.enumation.DelFlag;
 import com.plug.test.plugtest.mapper.PlugTestMapper;
 import com.rabbit.core.constructor.DeleteWrapper;
 import com.rabbit.core.constructor.QueryWrapper;
@@ -131,5 +133,16 @@ class PlugtestApplicationTests {
     public void selectOne(){
         PlugTest plugTest=plugTestMapper.selectOne(new QueryWrapper<>().where("plug_id","1002").isNotNull("plug_id"));
         log.info(plugTest !=null ? plugTest.toString() : "selectOne failed...");
+    }
+
+    @Test
+    public void selectList(){
+        List<PlugTest> plugTestList=plugTestMapper.selectList(new QueryWrapper<>().
+                where("del_flag", DelFlag.NO.getValue()).
+                ge("id",1).
+                setColumn("plug_des,plug_name").
+                limit(0,2).
+                orderBy("id",QueryWrapper.DESC));
+        log.info(plugTestList !=null ? JSONUtil.toJsonStr(plugTestList) : "selectList failed...");
     }
 }
